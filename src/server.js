@@ -6,7 +6,7 @@ import swaggerRouter from "./swagger.js"
 import corse from 'cors'
 import {resolve} from 'path'
 
-const PORT = 5000
+const PORT = "http://exam-e5qx.onrender.com"
 
 const app = express();
 app.use(corse())
