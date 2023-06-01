@@ -2,7 +2,7 @@ import swaggerJSDocs from "swagger-jsdoc";
 import SwaggerUi from 'swagger-ui-express'
 import { Router } from "express";
 
-const PORT = 'exam-e5qx.onrender.com'
+const PORT = 5000
 
 const router = Router()
 const swaggerDoc = swaggerJSDocs({
@@ -10,7 +10,7 @@ const swaggerDoc = swaggerJSDocs({
         openapi : '3.0.0',
         servers:[
             {
-                url :`http://${PORT}`,
+                url :`http://localhost:${PORT}`,
                 title: 'Server',
                 description:'Masterclass api'
             }
