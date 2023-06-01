@@ -1,0 +1,145 @@
+components:
+  schemas:
+    Response:
+      type: object
+      properties:
+        status:
+          type: integer
+        message:
+          type: string
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              image:
+                type: string
+              type:
+                type: string
+              date:
+                type: string
+              time:
+                type: string
+              internal_direction:
+                type: string
+              adress:
+                type: string
+              phone_number:
+                type: string
+              email:
+                type: string
+              website:
+                type: string
+              direction:
+                type: string
+              status:
+                type: string
+              created_at:
+                type: string
+    Search:
+      type: object
+      properties:
+        status:
+          type: integer
+        message:
+          type: string
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              image:
+                type: string
+              type:
+                type: string
+              date:
+                type: string
+              time:
+                type: string
+              internal_direction:
+                type: string
+              adress:
+                type: string
+              phone_number:
+                type: string
+              email:
+                type: string
+              website:
+                type: string
+              direction:
+                type: string
+              status:
+                type: string
+              created_at:
+                type: string
+
+    Post-masterclass:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        type:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        internal_direction:
+          type: string
+        adress:
+          type: string
+        phone_number:
+          type: string
+        email:
+          type: string
+        website:
+          type: string
+        direction:
+          type: string
+           
+    Login:
+      type: object
+      properties:
+        admin_username:
+          type: string
+        password:
+          type: string
+
+    LoginResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+        access_token:
+          type: string
+
+  
+
+    ErrorResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+        name:
+          type: string
+        message:
+          type: string
+

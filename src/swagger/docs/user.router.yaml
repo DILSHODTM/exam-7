@@ -1,0 +1,146 @@
+/masterclass:
+  get:
+    tags:
+      - masterclass
+    responses:
+      '200':
+        description: Active masterclass
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+
+/masterclass?page={page}:
+  get:
+    tags:
+      - masterclass
+    parameters:
+        - name: page
+          in: path
+          description: page
+          required: true
+    responses:
+      '200':
+        description: Active masterclass
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+
+/post/masterclass:
+  post:
+    tags:
+      - masterclass
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Post-masterclass'
+    responses:
+      '200':
+        description: login user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+      '400':
+        description: error message
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ErrorResponse'
+/admin/login:
+  post:
+    tags:
+      - Admin panel
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Login'
+    responses:
+      '200':
+        description: login user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginResponse'
+
+
+
+/activate?ids={mid}:
+  post:
+      tags:
+        - Admin panel
+      summary: activate
+      description: activate
+      operationId: activated
+      parameters:
+        - name: name
+          in: path
+          description: Search by name
+          required: true
+      
+
+/masterclass?name={name}:
+  get:
+    tags:
+      - Search
+    parameters:
+        - name: name
+          in: path
+          description: Search by name
+          required: true
+    responses:
+      '200':
+        description: search by name
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+/masterclass?type={type}:
+  get:
+    tags:
+      - Search
+    parameters:
+        - name: type
+          in: path
+          description: offline or online
+          required: true
+    responses:
+      '200':
+        description: by type
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+
+/masterclass?adress={adress}:
+  get:
+    tags:
+      - Search
+    parameters:
+        - name: adress
+          in: path
+          description: offline or online
+          required: true
+    responses:
+      '200':
+        description: Search by adress
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
+
+
+/admin/masterclass:
+  get:
+    tags:
+      - Admin panel
+    responses:
+      '200':
+        description: Active masterclass
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Response'
