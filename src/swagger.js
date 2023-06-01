@@ -10,7 +10,7 @@ const swaggerDoc = swaggerJSDocs({
         openapi : '3.0.0',
         servers:[
             {
-                url :`http://localhost:${PORT}`,
+                url :`https://exam-e5qx.onrender.com/`,
                 title: 'Server',
                 description:'Masterclass api'
             }
